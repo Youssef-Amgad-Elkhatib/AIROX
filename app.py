@@ -152,7 +152,7 @@ with st.sidebar:
     input_humidity = st.slider('Humidity (%)', 0.0, 100.0, 60.0, 0.1)
 
     # Urban Factors
-    input_proximity = st.slider('Proximity to Industrial Areas (km)', 0.0, 30.0, 2.5, 0.1)
+    input_proximity = st.number_input('Proximity to Industrial Areas (km)', 0.0, 30.0, 2.5, 0.1)
     input_density = st.number_input('Population Density (ppl/km²)', 100, 20000, 5000, 100)
 
 # --- 5. Data Processing and Prediction ---

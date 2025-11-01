@@ -170,28 +170,27 @@ st.markdown("</div>", unsafe_allow_html=True)
 # Scaling the input
 scaled_data = scaler.transform(input_data)
 st.markdown("<br>", unsafe_allow_html=True)
-col1, col2, col3 = st.columns([1.1, 0.5, 1])
-with col2:
-    # Prediction button
-    if st.button('Predict Air Quality'):
-        with st.spinner('Calculating prediction...'):
-            # Predict returns a NumPy array
-            prediction_array = model.predict(scaled_data)
 
-            # FIX: Extract the scalar integer from the array
-            prediction_numeric = int(prediction_array[0])
+# Prediction button
+if st.button('Predict Air Quality'):
+    with st.spinner('Calculating prediction...'):
+        # Predict returns a NumPy array
+        prediction_array = model.predict(scaled_data)
 
-            # Map the result to the descriptive label
-            label, emoji, color = QUALITY_MAPPING.get(prediction_numeric, ('Unknown', '❓', 'gray'))
+        # FIX: Extract the scalar integer from the array
+        prediction_numeric = int(prediction_array[0])
 
-            st.subheader("Prediction Result")
-            st.markdown(
-                # Using the new .prediction-box class for styling
-                f"<div class='prediction-box'>"
-                f"<h2 style='color: #f9e79f;'>The Predicted Air Quality is:</h2>"
-                f"<h1 style='color: {color}; font-size: 60px;'>{emoji} {label}</h1>"
-                f"</div>",
-                unsafe_allow_html=True
-            )
+        # Map the result to the descriptive label
+        label, emoji, color = QUALITY_MAPPING.get(prediction_numeric, ('Unknown', '❓', 'gray'))
 
-            st.markdown("---")
+        st.subheader("Prediction Result")
+        st.markdown(
+            # Using the new .prediction-box class for styling
+            f"<div class='prediction-box'>"
+            f"<h2 style='color: #f9e79f;'>The Predicted Air Quality is:</h2>"
+            f"<h1 style='color: {color}; font-size: 60px;'>{emoji} {label}</h1>"
+            f"</div>",
+            unsafe_allow_html=True
+        )
+
+        st.markdown("---")

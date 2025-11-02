@@ -17,6 +17,20 @@ The final product is a **sleek, black and gold Streamlit dashboard** allowing us
 
 ---
 
+
+## 📂 Dataset
+
+The dataset used in this project is publicly available on **Kaggle**: 
+
+🏡 **[Air Quality Dataset on Kaggle](https://www.kaggle.com/datasets/mujtabamatin/air-quality-and-pollution-assessment)**  
+
+---
+## 🎥 Video
+
+[![AIROX](https://ytcards.demolab.com/?id=n-6UMzqv9E4&title=AIROX&lang=en&timestamp=1762040969&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=2&width=300&border_radius=5&duration=156 "AIROX")](https://www.youtube.com/watch?v=n-6UMzqv9E4)
+
+
+---
 ## ⚙️ Project Workflow
 
 ### 🧩 Data Preparation
